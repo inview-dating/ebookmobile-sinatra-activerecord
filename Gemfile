@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "sinatra", "~> 1.4.7"
 gem "sqlite3", "~> 1.3.11"
 gem "puma", "~> 3.4"
-gem "activerecord", "~> 5.0"
+gem "sinatra-activerecord", "~> 2.0"
 
 gem "rake", "~> 11.2"
 gem "rspec", "~> 3.5"
