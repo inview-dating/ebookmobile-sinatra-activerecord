@@ -1,0 +1,35 @@
+#%RAML 0.8
+---
+title: e-BookMobile API
+baseUri: http://api.e-bookmobile.com/{version}
+version: v1
+
+/authors:
+  post:
+    description: Add a new author to the database
+    body:
+      application/json:
+        schema: !include entities/schemas/post_request_schema.json
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include entities/schemas/success_post_response_schema.json
+  get:
+    description: Retrieve a list of authors
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include entities/schemas/get_collection_post_response_schema.json
+  /{id}:
+    uriParameters:
+      id:
+        type: integer
+    get:
+      description: Retrieve a single author
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include entities/schemas/get_author_response_schema.json

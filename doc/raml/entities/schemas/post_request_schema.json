@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [ "author" ],
+  "additionalProperties": false,
+  "properties": {
+    "author": {
+      "type": "object",
+      "required": [ "first_name", "last_name" ],
+      "properties": {
+        "first_name": { "type": "string" },
+        "last_name": { "type": "string" },
+        "genre": { "type": "string" },
+        "birth_year": {
+          "type": "integer",
+          "maximum": 2010
+        },
+        "death_year": {
+          "type": "integer",
+          "maximum": 2016
+        }
+      }
+    }
+  }
+}
