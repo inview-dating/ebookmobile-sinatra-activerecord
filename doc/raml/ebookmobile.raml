@@ -6,6 +6,8 @@ version: v1
 
 /authors:
   post:
+    headers:
+      Content-Type: application/json
     description: Add a new author to the database
     body:
       application/json:
